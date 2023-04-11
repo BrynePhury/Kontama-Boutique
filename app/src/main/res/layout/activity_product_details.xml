@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    tools:context=".ProductDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bu_bu_ka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_330sdp"
+                android:layout_marginTop="-39dp"
+                app:cardElevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_40sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_300sdp"
+                        android:layout_marginTop="39dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        app:dotsColor="#E6E6E6"
+                        app:dotsSize="@dimen/_8sdp"
+                        app:dotsStrokeWidth="@dimen/_1sdp"
+                        app:dotsSpacing="@dimen/_4sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/view_pager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:progressMode="true"
+                        app:selectedDotColor="@color/offWhite" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/product_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toStartOf="@id/product_price_details"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/main_card"
+                app:layout_constraintTop_toBottomOf="@id/main_card" />
+
+            <RatingBar
+                android:id="@+id/details_rating_bar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:progressTint="@color/main_blue"
+                android:rating="3.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_name_details" />
+
+            <TextView
+                android:id="@+id/product_details_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Description"
+                android:textAlignment="textStart"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/main_card"
+                app:layout_constraintStart_toStartOf="@id/main_card"
+                app:layout_constraintTop_toBottomOf="@id/details_rating_bar" />
+
+            <TextView
+                android:id="@+id/product_price_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/product_name_details"
+                app:layout_constraintBottom_toBottomOf="@id/product_name_details"
+                app:layout_constraintEnd_toEndOf="@id/main_card" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bu_bu_ka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_to_cart_det"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:text="@string/add_to_cart"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:backgroundTint="@color/main_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quick_buy"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_buy_now">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_buy_now"
+                app:tint="@color/black"
+                android:padding="@dimen/_10sdp"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

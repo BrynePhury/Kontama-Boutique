@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645440697326",
+    "project_id": "kontama-boutique",
+    "storage_bucket": "kontama-boutique.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645440697326:android:6a11702cd1090777e8d4ff",
+        "android_client_info": {
+          "package_name": "com.sweetapps.kontamaboutique"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645440697326-t79ula70bbpjhi31absjrabnhvvv1nm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtBGLUGygp9z3QQBOmJDsSVqUYNfBe4Zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645440697326-t79ula70bbpjhi31absjrabnhvvv1nm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

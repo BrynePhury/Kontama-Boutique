@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".OrdersActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Orders"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/nothing_img"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/ic_nothing_here"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/secondary_text"/>
+
+    <TextView
+        android:id="@+id/nothing_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nothing Here!"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+</LinearLayout>
